@@ -6,6 +6,7 @@ module.exports = function CricketScoreKeeper() {
     var total = 0;
     var wickets = 10;
     var over = 0;
+    var msg = "Game Over"
 
 
     function setOvers(set) {
@@ -39,6 +40,9 @@ module.exports = function CricketScoreKeeper() {
                 }
 
             }
+            else{
+                ErrorMsg()
+            }
            
         } 
         over--
@@ -58,7 +62,9 @@ module.exports = function CricketScoreKeeper() {
     }
 
 
-    
+    function ErrorMsg(){
+        return msg
+    }
 
 
     return {
@@ -67,6 +73,7 @@ module.exports = function CricketScoreKeeper() {
         showScoreSheet,
         CalculateScore,
         howManyWicktes,
-        howManyOvers
+        howManyOvers,
+        ErrorMsg
     }
 }

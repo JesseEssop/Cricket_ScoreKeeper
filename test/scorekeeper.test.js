@@ -83,4 +83,27 @@ describe('Cricket Score tests', function () {
         assert.equal(5, scoreKeeper.howManyWicktes())
        
     });
+    it('This tests returns a message when more than 10 wickets are lost', function () {
+        let scoreKeeper = scoreKeep();
+        scoreKeeper.setOvers(5)
+        
+        scoreKeeper.addScore("123-w6");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w"); 
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.showScoreSheet();
+        scoreKeeper.howManyWicktes();
+
+        assert.equal("Game Over", scoreKeeper.ErrorMsg())
+
+
+       
+    });
 });
