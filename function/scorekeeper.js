@@ -50,14 +50,10 @@ module.exports = function CricketScoreKeeper() {
     }
 
     function CalculateScore() {
-
         let numOr0 = n => isNaN(n) ? 0 : n
-
         total = scoresheet.reduce((a, b) =>
-            Number(numOr0(a)) + Number(numOr0(b)))
-
+        Number(numOr0(a)) + Number(numOr0(b)))
         // console.log(over)
-
         return total
     }
 
