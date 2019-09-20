@@ -29,7 +29,7 @@ module.exports = function CricketScoreKeeper() {
         if (over > 0) {
             if (wickets > 0) {
                 for (var x = 1; x < scores.length; x++) {
-                    var wick = score.includes("w");
+                    var wick = scores.includes("w");
                     showscore = scores[x];
 
                     scoresheet.push(showscore);

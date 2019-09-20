@@ -69,15 +69,15 @@ describe('Cricket Score tests', function () {
        
     });
 
-    it('This tests calulates the total amount of runs for 3 overs', function () {
+    it('This tests calulates the total amount of wickets in 5 overs', function () {
         let scoreKeeper = scoreKeep();
         scoreKeeper.setOvers(5)
         
         scoreKeeper.addScore("123-w6");
-        scoreKeeper.addScore("463-ww");
-        scoreKeeper.addScore("463-ww");
-        scoreKeeper.addScore("463-ww");
-        scoreKeeper.addScore("463-ww");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
+        scoreKeeper.addScore("463-w");
         scoreKeeper.showScoreSheet();
 
         assert.equal(5, scoreKeeper.howManyWicktes())
